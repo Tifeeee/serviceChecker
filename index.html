@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="My_container">
+        <h1 class="firstText">Service Provider Checker</h1>
+        <input type="text" placeholder="Phone Number" id="numInput" autofocus>
+        <button id="checkBtn" onclick="checkNumber()">Check</button>
+        <div id="show"></div>
+
+    </div>
+
+    <script>
+        
+        const checkNumber=()=>{
+          let phoneNumber = document.getElementById("numInput").value;
+          document.getElementById("numInput").value = "";
+
+          if(phoneNumber.length !== 11){
+            show.innerHTML= ""
+            show.innerHTML = `<p class= "Invalid">Pls input a valid 11 digit phone number!</p>`;
+
+        } else if(phoneNumber.startsWith("0805")||
+            phoneNumber.startsWith("0705")||
+            phoneNumber.startsWith("0905")||
+            phoneNumber.startsWith("0807")||
+            phoneNumber.startsWith("0815")||
+            phoneNumber.startsWith("0811")||
+            phoneNumber.startsWith("0915")){
+                show.innerHTML = `<div class ="glo">
+                                  <h4>GLO</h4>
+                                  </div>`
+
+            }else if(phoneNumber.startsWith("0803")||
+            phoneNumber.startsWith("0806")||
+            phoneNumber.startsWith("0803")||
+            phoneNumber.startsWith("0703")||
+            phoneNumber.startsWith("0903")||
+            phoneNumber.startsWith("0906")||
+            phoneNumber.startsWith("0706")||
+            phoneNumber.startsWith("0806")||
+            phoneNumber.startsWith("0706")||
+            phoneNumber.startsWith("0813")||
+            phoneNumber.startsWith("0810")||
+            phoneNumber.startsWith("0814")||
+            phoneNumber.startsWith("0816")||
+            phoneNumber.startsWith("0913")||
+            phoneNumber.startsWith("0916")){
+                show.innerHTML = `<div class ="mtn">
+                                  <h4>MTN</h4>
+                                  </div>`
+
+            }else if(phoneNumber.startsWith("0802")||
+            phoneNumber.startsWith("0902")||
+            phoneNumber.startsWith("0701")||
+            phoneNumber.startsWith("0808")||
+            phoneNumber.startsWith("0708")||
+            phoneNumber.startsWith("0812")||
+            phoneNumber.startsWith("0901")||
+            phoneNumber.startsWith("0907")){
+                show.innerHTML = `<div class ="airtel">
+                                  <h4>AIRTEL</h4>
+                                  </div>`
+            }else if(
+            phoneNumber.startsWith("0809")||
+            phoneNumber.startsWith("0909")||
+            phoneNumber.startsWith("0817")||
+            phoneNumber.startsWith("0818")||
+            phoneNumber.startsWith("0908")){
+                show.innerHTML = `<div class ="nineMobile">
+                                  <h4>9MOBILE</h4>
+                                  </div>`
+            
+            }else{
+                alert("This service provider is not known")
+            }
+            
+      }
+            
+      
+
+        
+    </script>
+</body>
+</html>
