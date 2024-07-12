@@ -1,16 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url(images/pexels-karolina-grabowska-8947184.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
 }
 
-.My_container{
+.My_container {
     width: 1300px;
     height: 350px;
     border: 2px solid black;
@@ -21,7 +24,7 @@ body{
     border-radius: 10px;
 }
 
-#numInput{
+#numInput {
     padding: 5px;
     height: 50px;
     width: 800px;
@@ -30,19 +33,16 @@ body{
     border-radius: 5px;
 }
 
-#checkBtn{
-    height:50px ;
+#checkBtn {
+    height: 50px;
     width: 100px;
     background-color: gray;
     color: white;
     border: none;
     border-radius: 5px;
-    
-
 }
 
-
-.firstText{
+.firstText {
     text-align: center;
     margin-top: 50px;
     text-decoration: underline;
@@ -50,15 +50,17 @@ body{
     color: white;
 }
 
-#show{
+#show {
     margin-left: 350px;
     height: 50px;
-    /* background-color: blue; */
     margin-top: 20px;
     width: 500px;
+    color: white;
+    /* text-align: center; */
+    border-radius: 5px;
 }
 
-.glo{
+.glo {
     height: 50px;
     width: 85px;
     background-color: green;
@@ -69,11 +71,11 @@ body{
     border-radius: 5px;
 }
 
-.glo h4{
+.glo h4 {
     margin-top: -10px;
 }
 
-.mtn{
+.mtn {
     height: 50px;
     width: 85px;
     background-color: yellow;
@@ -84,14 +86,14 @@ body{
     border-radius: 5px;
 }
 
-.mtn h4{
+.mtn h4 {
     margin-top: -10px;
 }
 
-.airtel{
+.airtel {
     height: 50px;
     width: 85px;
-    background-color:white;
+    background-color: white;
     padding: 10px;
     color: red;
     margin-left: 230px;
@@ -99,11 +101,11 @@ body{
     border-radius: 5px;
 }
 
-.airtel h4{
+.airtel h4 {
     margin-top: 5px;
 }
 
-.nineMobile{
+.nineMobile {
     height: 50px;
     width: 120px;
     background-color: green;
@@ -114,16 +116,99 @@ body{
     border-radius: 5px;
 }
 
-.nineMobile h4{
+.nineMobile h4 {
     margin-top: -10px;
 }
 
-.Invalid{
+.Invalid {
     color: white;
     font-weight: bolder;
     margin-left: 160px;
 }
 
-@media () {
-    
+@media screen and (max-width: 478px) {
+    .My_container {
+        width: 330px;
+        height: 350px;
+        transform: translateX(-119px);
+        padding: 30px;
+        /* margin-left: -50px; */
+    }
+
+    .firstText {
+        font-weight: 250;
+        font-size: 25px;
+        margin-top: -5px;
+    }
+
+    #numInput {
+        margin-left: 25px;
+        width: 220px;
+        height: 40px;
+        margin-bottom: 40px;
+    }
+
+    #checkBtn {
+        transform: translateX(100px);
+        height: 40px;
+        width: 80px;
+    }
+
+    #show {
+       margin-left: -40px;
+       width: 500px;
+       padding: 10px;
+       transform: translateY(-10px);
+       }
+
+    .Invalid{
+        font-weight: 5px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10px;
+        transform: translateX(-100px);
+    }
+
+    .mtn{
+        transform: translateX(-130px);
+        width: 150px;
+        
+    }
+
+    .mtn h4{
+        /* margin-top: 30px; */
+        margin-left: 30px;
+    }
+
+    .nineMobile{
+        transform: translateX(-130px);
+        width: 150px;
+    }
+
+    .nineMobile h4{
+        margin-left: 20px;
+    }
+
+    .glo{
+        transform: translateX(-130px);
+        width: 150px;
+    }
+
+    .glo h4{
+        margin-left: 30px;
+    }
+
+    .airtel{
+        transform: translateX(-130px);
+        width: 150px;
+    }
+
+    .airtel h4{
+        margin-left: 30px;
+    }
+
+
+    body {
+        background-size: cover;
+        background-position: center;
+    }
 }
